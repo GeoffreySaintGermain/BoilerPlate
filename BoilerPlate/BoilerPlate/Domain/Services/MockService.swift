@@ -12,7 +12,11 @@ protocol MockService {
 
 class DefaultMockService: MockService {
     
-    let analyticsRepository: MockRepository = DefaultMockRepository()
+    let analyticsRepository: MockRepository
+    
+    init(analyticsRepository: MockRepository = DefaultDIContainer.shared.resolve(type: MockRepository.self)) {
+        self.analyticsRepository = analyticsRepository
+    }
     
     @discardableResult
     func fetchUser(_ id: String) async throws -> User {

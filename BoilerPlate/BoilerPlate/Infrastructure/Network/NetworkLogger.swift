@@ -13,7 +13,7 @@ protocol NetworkLogger {
     func log(error: Error)
 }
 
-final class DefaultNetworkErrorLogger: NetworkLogger {
+final class DefaultNetworkLogger: NetworkLogger {
     func log(request: URLRequest) {
         print("-------------")
         print("request: \(String(describing: request.url))")

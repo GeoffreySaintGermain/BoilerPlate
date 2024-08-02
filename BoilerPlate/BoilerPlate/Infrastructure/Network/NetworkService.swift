@@ -18,7 +18,12 @@ final class DefaultNetworkService: NetworkService {
     private let session = URLSession.shared
     private let decoder = JSONDecoder()
     private let encoder = JSONEncoder()
-    private let logger = DefaultNetworkErrorLogger()
+    
+    private let logger: NetworkLogger
+    
+    init(logger: NetworkLogger = DefaultDIContainer.shared.resolve(type: NetworkLogger.self)) {
+        self.logger = logger
+    }
     
     func request<D: Decodable>(from endpoint: Endpoint) async throws -> D {
         let request = try endpoint.createRequest()

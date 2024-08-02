@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  BoilerPlate
 //
-//  Created by Saint Germain, Geoffrey  on 07/02/2024.
+//  Created by Saint Germain, Geoffrey on 07/02/2024.
 //
 
 import UIKit

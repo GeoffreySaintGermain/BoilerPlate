@@ -31,6 +31,7 @@
 		2E11C7612C1759B800378457 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E11C7312C1759B700378457 /* User.swift */; };
 		2E11C7632C1759B800378457 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E11C7352C1759B700378457 /* MockService.swift */; };
 		2E11C7642C1759B800378457 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E11C7362C1759B700378457 /* UserService.swift */; };
+		2EFFD9C92C5CF7E80088BE65 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFD9C82C5CF7E80088BE65 /* DIContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		2E11C7312C1759B700378457 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2E11C7352C1759B700378457 /* MockService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		2E11C7362C1759B700378457 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		2EFFD9C82C5CF7E80088BE65 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,13 +174,6 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		2E11C70C2C1759B700378457 /* Factories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Factories;
-			sourceTree = "<group>";
-		};
 		2E11C7112C1759B700378457 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,7 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				2E11C70A2C1759B700378457 /* Domain */,
-				2E11C70C2C1759B700378457 /* Factories */,
 				2E11C7112C1759B700378457 /* Network */,
 				2E11C7152C1759B700378457 /* UserDefaultsStorage */,
 			);
@@ -216,6 +210,7 @@
 			children = (
 				2E11C71E2C1759B700378457 /* AppDelegate.swift */,
 				2E11C6DF2C17595800378457 /* BoilerPlateApp.swift */,
+				2EFFD9C72C5CF7100088BE65 /* DIContainer */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -312,6 +307,14 @@
 				2E11C7442C1759B800378457 /* Views */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2EFFD9C72C5CF7100088BE65 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				2EFFD9C82C5CF7E80088BE65 /* DIContainer.swift */,
+			);
+			path = DIContainer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,6 +464,7 @@
 				2E11C7612C1759B800378457 /* User.swift in Sources */,
 				2E11C7492C1759B800378457 /* NetworkError.swift in Sources */,
 				2E11C7632C1759B800378457 /* MockService.swift in Sources */,
+				2EFFD9C92C5CF7E80088BE65 /* DIContainer.swift in Sources */,
 				2E11C7482C1759B800378457 /* Endpoint.swift in Sources */,
 				2E11C7582C1759B800378457 /* HomeDTO.swift in Sources */,
 			);

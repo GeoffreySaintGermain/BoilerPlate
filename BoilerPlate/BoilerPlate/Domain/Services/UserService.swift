@@ -13,7 +13,11 @@ protocol UserService {
 
 class DefaultUserService: UserService {
     
-    let userRepository: UserRepository = DefaultUserRepository()
+    let userRepository: UserRepository
+    
+    init(userRepository: UserRepository = DefaultDIContainer.shared.resolve(type: UserRepository.self)) {
+        self.userRepository = userRepository
+    }
     
     func fetchUsers() async throws -> [User] {
         var users: [User] = []

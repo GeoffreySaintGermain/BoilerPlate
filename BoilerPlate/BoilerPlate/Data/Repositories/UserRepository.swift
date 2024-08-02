@@ -13,7 +13,11 @@ protocol UserRepository {
 
 final class DefaultUserRepository: UserRepository {
     
-    private let networkService = DefaultNetworkService()
+    private let networkService: NetworkService
+    
+    init(networkService: NetworkService = DefaultDIContainer.shared.resolve(type: NetworkService.self)) {
+        self.networkService = networkService
+    }
 
     func fetchUsers() async throws -> [String: String] {
         let endpoint = ApiEndpoints.getProfile(with: "")
